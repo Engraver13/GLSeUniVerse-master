@@ -50,7 +50,9 @@ class _qrPageState extends State<qrPage> {
               //student Image
               CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('images/profile.png'),
+                //backgroundImage: AssetImage('images/profile.png'),
+                backgroundImage: NetworkImage(
+                    "https://images.unsplash.com/photo-1531256456869-ce942a665e80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI4fHxwcm9maWxlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"),
               ),
               SizedBox(
                 height: 10,
@@ -91,7 +93,7 @@ class _qrPageState extends State<qrPage> {
                 padding: EdgeInsets.all(8),
                 width: 350,
                 decoration: BoxDecoration(
-                    color: white,
+                    color: buttoncolor,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
@@ -104,7 +106,8 @@ class _qrPageState extends State<qrPage> {
                 child: Center(
                     child:
                         //Department
-                        Text("Faculty of Computer Application and IT - FCAIT")),
+                        Text("Faculty of Computer Application and IT - FCAIT",
+                            style: TextStyle(color: white))),
               ),
               SizedBox(
                 height: 20,
@@ -113,7 +116,7 @@ class _qrPageState extends State<qrPage> {
                 padding: EdgeInsets.all(8),
                 width: 350,
                 decoration: BoxDecoration(
-                    color: white,
+                    color: buttoncolor,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
@@ -126,7 +129,9 @@ class _qrPageState extends State<qrPage> {
                 child: Center(
                     //batch,course
                     child: Text(
-                        "Masters of Science in Information Technology\nBatch : 2023-2025")),
+                  "Masters of Science in Information Technology\nBatch : 2023-2025",
+                  style: TextStyle(color: white),
+                )),
               ),
               // SizedBox(
               //   height: 20,

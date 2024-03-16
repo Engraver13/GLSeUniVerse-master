@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:GLSeUniVerse/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:GLSeUniVerse/barcodePage.dart';
@@ -31,6 +32,12 @@ class _SplashScreenState extends State<SplashScreen> {
           MaterialPageRoute(
             builder: (context) => loginPage(),
           ));
+
+      // Navigator.pushReplacement(
+      //     context,
+      //     MaterialPageRoute(
+      //       builder: (context) => homePage(),
+      //     ));
     });
   }
 

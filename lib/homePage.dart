@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:GLSeUniVerse/colors.dart';
+import 'package:GLSeUniVerse/securityHomePage.dart';
 import 'package:GLSeUniVerse/sideNavigation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -245,294 +246,344 @@ class _HomePageState extends State<HomePage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Row(
+                child: Container(
+                  height: 320,
+                  child: SingleChildScrollView(
+                    child: Column(
                       children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 20,
-                              left: 25,
-                              right: 25,
-                            ),
-                            decoration: BoxDecoration(
-                                color: white,
-                                borderRadius: BorderRadius.circular(25),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: grey.withOpacity(0.03),
-                                    spreadRadius: 10,
-                                    blurRadius: 3,
-                                    // changes position of shadow
+                        Row(
+                          children: [
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => securityPage(),
+                                      ));
+                                  print("1st Clicked");
+                                },
+                                child: Container(
+                                  height: 100,
+                                  margin: EdgeInsets.only(
+                                    top: 10,
+                                    left: 25,
+                                    right: 25,
                                   ),
-                                ]),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10, bottom: 10, right: 20, left: 20),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 50,
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                      color: arrowbgColor,
-                                      borderRadius: BorderRadius.circular(15),
-                                      // shape: BoxShape.circle
+                                  decoration: BoxDecoration(
+                                      color: white,
+                                      borderRadius: BorderRadius.circular(25),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: grey.withOpacity(0.03),
+                                          spreadRadius: 10,
+                                          blurRadius: 3,
+                                          // changes position of shadow
+                                        ),
+                                      ]),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 10,
+                                        bottom: 10,
+                                        right: 20,
+                                        left: 20),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 60,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: arrowbgColor,
+                                            borderRadius:
+                                                BorderRadius.circular(15),
+                                            // shape: BoxShape.circle
+                                          ),
+                                          child: Center(
+                                              child: Icon(
+                                            Icons.feed_outlined,
+                                            size: 30,
+                                          )),
+                                        ),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                            width: (size.width - 90) * 0.7,
+                                            child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Request Form",
+                                                    style: TextStyle(
+                                                        fontSize: 16,
+                                                        color: black,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  // SizedBox(
+                                                  //   height: 5,
+                                                  // ),
+                                                  // Text(
+                                                  //   "Receiving Payment from company",
+                                                  //   style: TextStyle(
+                                                  //       fontSize: 12,
+                                                  //       color: black
+                                                  //           .withOpacity(0.5),
+                                                  //       fontWeight:
+                                                  //           FontWeight.w400),
+                                                  // ),
+                                                ]),
+                                          ),
+                                        ),
+                                        // Expanded(
+                                        //   child: Container(
+                                        //     child: Row(
+                                        //       mainAxisAlignment:
+                                        //           MainAxisAlignment.end,
+                                        //       children: [
+                                        //         Text(
+                                        //           "\$250",
+                                        //           style: TextStyle(
+                                        //               fontSize: 15,
+                                        //               fontWeight: FontWeight.bold,
+                                        //               color: black),
+                                        //         )
+                                        //       ],
+                                        //     ),
+                                        //   ),
+                                        // )
+                                      ],
                                     ),
-                                    child: Center(
-                                        child:
-                                            Icon(Icons.arrow_upward_rounded)),
                                   ),
-                                  SizedBox(
-                                    width: 15,
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      width: (size.width - 90) * 0.7,
-                                      child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "Sent",
-                                              style: TextStyle(
-                                                  fontSize: 15,
-                                                  color: black,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            Text(
-                                              "Sending Payment to Clients",
-                                              style: TextStyle(
-                                                  fontSize: 12,
-                                                  color: black.withOpacity(0.5),
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ]),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            "\$150",
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.bold,
-                                                color: black),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  )
-                                ],
+                                ),
                               ),
                             ),
-                          ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  print("Clicked!!");
+                                },
+                                child: Container(
+                                  height: 100,
+                                  margin: EdgeInsets.only(
+                                    top: 10,
+                                    left: 25,
+                                    right: 25,
+                                  ),
+                                  decoration: BoxDecoration(
+                                      color: white,
+                                      borderRadius: BorderRadius.circular(25),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: grey.withOpacity(0.03),
+                                          spreadRadius: 10,
+                                          blurRadius: 3,
+                                          // changes position of shadow
+                                        ),
+                                      ]),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 10,
+                                        bottom: 10,
+                                        right: 20,
+                                        left: 20),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 60,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: arrowbgColor,
+                                            borderRadius:
+                                                BorderRadius.circular(15),
+                                            // shape: BoxShape.circle
+                                          ),
+                                          child: Center(
+                                              child: Icon(
+                                            Icons.feed_outlined,
+                                            size: 30,
+                                          )),
+                                        ),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                            width: (size.width - 90) * 0.7,
+                                            child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Request Form",
+                                                    style: TextStyle(
+                                                        fontSize: 16,
+                                                        color: black,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  // SizedBox(
+                                                  //   height: 5,
+                                                  // ),
+                                                  // Text(
+                                                  //   "Receiving Payment from company",
+                                                  //   style: TextStyle(
+                                                  //       fontSize: 12,
+                                                  //       color: black
+                                                  //           .withOpacity(0.5),
+                                                  //       fontWeight:
+                                                  //           FontWeight.w400),
+                                                  // ),
+                                                ]),
+                                          ),
+                                        ),
+                                        // Expanded(
+                                        //   child: Container(
+                                        //     child: Row(
+                                        //       mainAxisAlignment:
+                                        //           MainAxisAlignment.end,
+                                        //       children: [
+                                        //         Text(
+                                        //           "\$250",
+                                        //           style: TextStyle(
+                                        //               fontSize: 15,
+                                        //               fontWeight: FontWeight.bold,
+                                        //               color: black),
+                                        //         )
+                                        //       ],
+                                        //     ),
+                                        //   ),
+                                        // )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                height: 100,
+                                margin: EdgeInsets.only(
+                                  top: 10,
+                                  left: 25,
+                                  right: 25,
+                                ),
+                                decoration: BoxDecoration(
+                                    color: white,
+                                    borderRadius: BorderRadius.circular(25),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: grey.withOpacity(0.03),
+                                        spreadRadius: 10,
+                                        blurRadius: 3,
+                                        // changes position of shadow
+                                      ),
+                                    ]),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, bottom: 10, right: 20, left: 20),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        width: 60,
+                                        height: 60,
+                                        decoration: BoxDecoration(
+                                          color: arrowbgColor,
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          // shape: BoxShape.circle
+                                        ),
+                                        child: Center(
+                                            child: Icon(
+                                          Icons.feed_outlined,
+                                          size: 30,
+                                        )),
+                                      ),
+                                      SizedBox(
+                                        width: 15,
+                                      ),
+                                      Expanded(
+                                        child: Container(
+                                          width: (size.width - 90) * 0.7,
+                                          child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Request Form",
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      color: black,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                                // SizedBox(
+                                                //   height: 5,
+                                                // ),
+                                                // Text(
+                                                //   "Receiving Payment from company",
+                                                //   style: TextStyle(
+                                                //       fontSize: 12,
+                                                //       color: black
+                                                //           .withOpacity(0.5),
+                                                //       fontWeight:
+                                                //           FontWeight.w400),
+                                                // ),
+                                              ]),
+                                        ),
+                                      ),
+                                      // Expanded(
+                                      //   child: Container(
+                                      //     child: Row(
+                                      //       mainAxisAlignment:
+                                      //           MainAxisAlignment.end,
+                                      //       children: [
+                                      //         Text(
+                                      //           "\$250",
+                                      //           style: TextStyle(
+                                      //               fontSize: 15,
+                                      //               fontWeight: FontWeight.bold,
+                                      //               color: black),
+                                      //         )
+                                      //       ],
+                                      //     ),
+                                      //   ),
+                                      // )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                              left: 25,
-                              right: 25,
-                            ),
-                            decoration: BoxDecoration(
-                                color: white,
-                                borderRadius: BorderRadius.circular(25),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: grey.withOpacity(0.03),
-                                    spreadRadius: 10,
-                                    blurRadius: 3,
-                                    // changes position of shadow
-                                  ),
-                                ]),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10, bottom: 10, right: 20, left: 20),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 50,
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                      color: arrowbgColor,
-                                      borderRadius: BorderRadius.circular(15),
-                                      // shape: BoxShape.circle
-                                    ),
-                                    child: Center(
-                                        child:
-                                            Icon(Icons.arrow_downward_rounded)),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      width: (size.width - 90) * 0.7,
-                                      child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "Receive",
-                                              style: TextStyle(
-                                                  fontSize: 15,
-                                                  color: black,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            Text(
-                                              "Receiving Payment from company",
-                                              style: TextStyle(
-                                                  fontSize: 12,
-                                                  color: black.withOpacity(0.5),
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ]),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            "\$250",
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.bold,
-                                                color: black),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 10,
-                              left: 25,
-                              right: 25,
-                            ),
-                            decoration: BoxDecoration(
-                                color: white,
-                                borderRadius: BorderRadius.circular(25),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: grey.withOpacity(0.03),
-                                    spreadRadius: 10,
-                                    blurRadius: 3,
-                                    // changes position of shadow
-                                  ),
-                                ]),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10, bottom: 10, right: 20, left: 20),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 50,
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                      color: arrowbgColor,
-                                      borderRadius: BorderRadius.circular(15),
-                                      // shape: BoxShape.circle
-                                    ),
-                                    child: Center(
-                                        child:
-                                            Icon(CupertinoIcons.money_dollar)),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      width: (size.width - 90) * 0.7,
-                                      child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "Loan",
-                                              style: TextStyle(
-                                                  fontSize: 15,
-                                                  color: black,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            Text(
-                                              "Loan for the Car",
-                                              style: TextStyle(
-                                                  fontSize: 12,
-                                                  color: black.withOpacity(0.5),
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          ]),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            "\$400",
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.bold,
-                                                color: black),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                  ),
                 ),
               )
             ],

@@ -415,10 +415,21 @@ class _loginPageState extends State<loginPage> {
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                // color: Colors.grey,
-                border: Border.all(color: Colors.black),
-                borderRadius: BorderRadius.circular(8),
-              ),
+                  color: white,
+                  borderRadius: BorderRadius.circular(25),
+                  boxShadow: [
+                    BoxShadow(
+                      color: grey.withOpacity(0.03),
+                      spreadRadius: 10,
+                      blurRadius: 3,
+                      // changes position of shadow
+                    ),
+                  ]),
+              // decoration: BoxDecoration(
+              //   // color: Colors.grey,
+              //   border: Border.all(color: Colors.black),
+              //   borderRadius: BorderRadius.circular(8),
+              // ),
               width: 350,
               child: DropdownButton(
                 hint: Text("Select Role"),

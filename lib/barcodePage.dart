@@ -75,7 +75,7 @@ class _barcodePageState extends State<barcodePage> {
                 padding: EdgeInsets.all(8),
                 width: 350,
                 decoration: BoxDecoration(
-                    color: white,
+                    color: buttoncolor,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
@@ -88,20 +88,21 @@ class _barcodePageState extends State<barcodePage> {
                 //batch,division,course
                 child: Center(
                   child: Text(
-                      "Masters of Science in Information Technology\n\nBatch: 2023-2025\n\nDiv: A "),
+                      "Masters of Science in Information Technology\n\nBatch: 2023-2025\n\nDiv: A ",
+                      style: TextStyle(color: white)),
                 ),
               ),
-              SizedBox(
-                height: 35,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Get.toNamed('/securityPage');
-                },
-                child: Text("Next Page"),
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 63, 121, 235)),
-              )
+              // SizedBox(
+              //   height: 35,
+              // ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Get.toNamed('/securityPage');
+              //   },
+              //   child: Text("Next Page"),
+              //   style: ElevatedButton.styleFrom(
+              //       backgroundColor: Color.fromARGB(255, 63, 121, 235)),
+              // )
             ],
           ),
         ),
