@@ -1,5 +1,9 @@
+import 'package:GLSeUniVerse/barcodePage.dart';
 import 'package:GLSeUniVerse/colors.dart';
 import 'package:GLSeUniVerse/editProfile.dart';
+import 'package:GLSeUniVerse/loginPage.dart';
+import 'package:GLSeUniVerse/postDiscussion.dart';
+import 'package:GLSeUniVerse/qrPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -42,7 +46,7 @@ class sideNavigation extends StatelessWidget {
                   color: mainFontColor),
             ),
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => editProfile(),
@@ -66,7 +70,37 @@ class sideNavigation extends StatelessWidget {
                 fontSize: 20,
                 color: mainFontColor),
           ),
-          onTap: () => Get.toNamed('/qrPage'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return qrPage();
+              },
+            ));
+          },
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        ListTile(
+          leading: Icon(
+            Icons.announcement,
+            size: 30,
+            color: mainFontColor,
+          ),
+          title: Text(
+            "Discussions",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: mainFontColor),
+          ),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return postDiscussion();
+              },
+            ));
+          },
         ),
         SizedBox(
           height: 20,
@@ -84,7 +118,13 @@ class sideNavigation extends StatelessWidget {
                 fontSize: 20,
                 color: mainFontColor),
           ),
-          onTap: () => Get.toNamed('/barcodePage'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return barcodePage();
+              },
+            ));
+          },
         ),
         SizedBox(
           height: 20,
@@ -102,7 +142,13 @@ class sideNavigation extends StatelessWidget {
                 fontSize: 20,
                 color: mainFontColor),
           ),
-          onTap: () => Get.toNamed('/qrPage'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return loginPage();
+              },
+            ));
+          },
         ),
       ]),
     );

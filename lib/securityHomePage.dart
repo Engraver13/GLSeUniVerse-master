@@ -1,5 +1,8 @@
 import 'package:GLSeUniVerse/colors.dart';
+import 'package:GLSeUniVerse/qrPage.dart';
+import 'package:GLSeUniVerse/scanQrCode.dart';
 import 'package:GLSeUniVerse/userDetails.dart';
+import 'package:GLSeUniVerse/visitorEntryPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -146,7 +149,7 @@ class _securityPageState extends State<securityPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => securityPage(),
+                                    builder: (context) => QRCodeScannerScreen(),
                                   ));
                               print("1st Clicked");
                             },
@@ -255,7 +258,12 @@ class _securityPageState extends State<securityPage> {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              print("Clicked!!");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => visitorEntry(),
+                                  ));
+                              //print("1st Clicked");
                             },
                             child: Container(
                               height: 100,

@@ -1,3 +1,4 @@
+import 'package:GLSeUniVerse/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,17 +26,17 @@ class _visitorEntryState extends State<visitorEntry> {
                 child: Container(
                   width: 300,
                   padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Color.fromARGB(255, 63, 121, 235),
-                  ),
+                  // decoration: BoxDecoration(
+                  //   borderRadius: BorderRadius.circular(40),
+                  //   color: buttoncolor,
+                  // ),
                   child: Center(
                     child: Text(
                       "Visitor Entry",
                       style: TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                          color: mainFontColor),
                     ),
                   ),
                 ),
@@ -142,7 +143,7 @@ class _visitorEntryState extends State<visitorEntry> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 63, 121, 235),
+                    backgroundColor: buttoncolor,
                   ),
                 ),
               )

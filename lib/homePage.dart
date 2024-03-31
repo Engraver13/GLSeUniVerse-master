@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:GLSeUniVerse/colors.dart';
+import 'package:GLSeUniVerse/requestDocs.dart';
 import 'package:GLSeUniVerse/securityHomePage.dart';
 import 'package:GLSeUniVerse/sideNavigation.dart';
 import 'package:flutter/cupertino.dart';
@@ -259,7 +260,7 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => securityPage(),
+                                        builder: (context) => requestDocs(),
                                       ));
                                   print("1st Clicked");
                                 },
@@ -317,7 +318,7 @@ class _HomePageState extends State<HomePage> {
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    "Request Form",
+                                                    "Request Docs",
                                                     style: TextStyle(
                                                         fontSize: 16,
                                                         color: black,
@@ -372,7 +373,128 @@ class _HomePageState extends State<HomePage> {
                             Expanded(
                               child: GestureDetector(
                                 onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => securityPage(),
+                                      ));
                                   print("Clicked!!");
+                                },
+                                child: Container(
+                                  height: 100,
+                                  margin: EdgeInsets.only(
+                                    top: 10,
+                                    left: 25,
+                                    right: 25,
+                                  ),
+                                  decoration: BoxDecoration(
+                                      color: white,
+                                      borderRadius: BorderRadius.circular(25),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: grey.withOpacity(0.03),
+                                          spreadRadius: 10,
+                                          blurRadius: 3,
+                                          // changes position of shadow
+                                        ),
+                                      ]),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 10,
+                                        bottom: 10,
+                                        right: 20,
+                                        left: 20),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 60,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: arrowbgColor,
+                                            borderRadius:
+                                                BorderRadius.circular(15),
+                                            // shape: BoxShape.circle
+                                          ),
+                                          child: Center(
+                                              child: Icon(
+                                            Icons.feed_outlined,
+                                            size: 30,
+                                          )),
+                                        ),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                            width: (size.width - 90) * 0.7,
+                                            child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Security Home Page",
+                                                    style: TextStyle(
+                                                        fontSize: 16,
+                                                        color: black,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  // SizedBox(
+                                                  //   height: 5,
+                                                  // ),
+                                                  // Text(
+                                                  //   "Receiving Payment from company",
+                                                  //   style: TextStyle(
+                                                  //       fontSize: 12,
+                                                  //       color: black
+                                                  //           .withOpacity(0.5),
+                                                  //       fontWeight:
+                                                  //           FontWeight.w400),
+                                                  // ),
+                                                ]),
+                                          ),
+                                        ),
+                                        // Expanded(
+                                        //   child: Container(
+                                        //     child: Row(
+                                        //       mainAxisAlignment:
+                                        //           MainAxisAlignment.end,
+                                        //       children: [
+                                        //         Text(
+                                        //           "\$250",
+                                        //           style: TextStyle(
+                                        //               fontSize: 15,
+                                        //               fontWeight: FontWeight.bold,
+                                        //               color: black),
+                                        //         )
+                                        //       ],
+                                        //     ),
+                                        //   ),
+                                        // )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => requestDocs(),
+                                      ));
+                                  print("Clicked 3rd row");
                                 },
                                 child: Container(
                                   height: 100,
@@ -469,109 +591,6 @@ class _HomePageState extends State<HomePage> {
                                         // )
                                       ],
                                     ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                height: 100,
-                                margin: EdgeInsets.only(
-                                  top: 10,
-                                  left: 25,
-                                  right: 25,
-                                ),
-                                decoration: BoxDecoration(
-                                    color: white,
-                                    borderRadius: BorderRadius.circular(25),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: grey.withOpacity(0.03),
-                                        spreadRadius: 10,
-                                        blurRadius: 3,
-                                        // changes position of shadow
-                                      ),
-                                    ]),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 10, bottom: 10, right: 20, left: 20),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: 60,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          color: arrowbgColor,
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          // shape: BoxShape.circle
-                                        ),
-                                        child: Center(
-                                            child: Icon(
-                                          Icons.feed_outlined,
-                                          size: 30,
-                                        )),
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Expanded(
-                                        child: Container(
-                                          width: (size.width - 90) * 0.7,
-                                          child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  "Request Form",
-                                                  style: TextStyle(
-                                                      fontSize: 16,
-                                                      color: black,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                                // SizedBox(
-                                                //   height: 5,
-                                                // ),
-                                                // Text(
-                                                //   "Receiving Payment from company",
-                                                //   style: TextStyle(
-                                                //       fontSize: 12,
-                                                //       color: black
-                                                //           .withOpacity(0.5),
-                                                //       fontWeight:
-                                                //           FontWeight.w400),
-                                                // ),
-                                              ]),
-                                        ),
-                                      ),
-                                      // Expanded(
-                                      //   child: Container(
-                                      //     child: Row(
-                                      //       mainAxisAlignment:
-                                      //           MainAxisAlignment.end,
-                                      //       children: [
-                                      //         Text(
-                                      //           "\$250",
-                                      //           style: TextStyle(
-                                      //               fontSize: 15,
-                                      //               fontWeight: FontWeight.bold,
-                                      //               color: black),
-                                      //         )
-                                      //       ],
-                                      //     ),
-                                      //   ),
-                                      // )
-                                    ],
                                   ),
                                 ),
                               ),

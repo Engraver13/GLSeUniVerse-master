@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:GLSeUniVerse/home.dart';
+import 'package:GLSeUniVerse/postDiscussion.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:GLSeUniVerse/barcodePage.dart';
@@ -47,59 +48,65 @@ class _SplashScreenState extends State<SplashScreen> {
       title: "GLS_eUniverse",
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
-      // getPages: [
-      //   GetPage(
-      //     name: '/',
-      //     page: () => HomePage(),
-      //     transition: Transition.noTransition,
-      //   ),
-      //   GetPage(
-      //     name: '/login',
-      //     page: () => loginPage(),
-      //     transition: Transition.noTransition,
-      //   ),
-      //   GetPage(
-      //     name: '/studentHomePage',
-      //     page: () => HomePage(),
-      //     transition: Transition.noTransition,
-      //   ),
-      //   GetPage(
-      //     name: '/qrPage',
-      //     page: () => qrPage(),
-      //     transition: Transition.noTransition,
-      //   ),
-      //   GetPage(
-      //     name: '/barcodePage',
-      //     page: () {
-      //       return barcodePage();
-      //     },
-      //     transition: Transition.noTransition,
-      //   ),
-      //   GetPage(
-      //     name: '/securityPage',
-      //     page: () {
-      //       return securityPage();
-      //     },
-      //   ),
-      //   GetPage(
-      //     name: '/visitorEntryPage',
-      //     page: () {
-      //       return visitorEntry();
-      //     },
-      //   ),
-      //   GetPage(
-      //     name: '/scanQrCode',
-      //     page: () {
-      //       return QRCodeScannerScreen();
-      //     },
-      //   ),
-      //   GetPage(
-      //     name: '/cameraOpen',
-      //     page: () {
-      //       return CameraApp();
-      //     },
-      //   ),
-      // ],
+      getPages: [
+        GetPage(
+          name: '/',
+          page: () => HomePage(),
+          transition: Transition.noTransition,
+        ),
+        GetPage(
+          name: '/login',
+          page: () => loginPage(),
+          transition: Transition.noTransition,
+        ),
+        GetPage(
+          name: '/studentHomePage',
+          page: () => HomePage(),
+          transition: Transition.noTransition,
+        ),
+        GetPage(
+          name: '/qrPage',
+          page: () => qrPage(),
+          transition: Transition.noTransition,
+        ),
+        GetPage(
+          name: '/barcodePage',
+          page: () {
+            return barcodePage();
+          },
+          transition: Transition.noTransition,
+        ),
+        GetPage(
+          name: '/securityPage',
+          page: () {
+            return securityPage();
+          },
+        ),
+        GetPage(
+          name: '/visitorEntryPage',
+          page: () {
+            return visitorEntry();
+          },
+        ),
+        GetPage(
+          name: '/scanQrCode',
+          page: () {
+            return QRCodeScannerScreen();
+          },
+        ),
+        GetPage(
+          name: '/cameraOpen',
+          page: () {
+            return CameraApp();
+          },
+        ),
+        GetPage(
+          name: '/postDiscussion',
+          page: () {
+            return postDiscussion();
+          },
+        ),
+      ],
       home: Scaffold(
           body: SingleChildScrollView(
         child: Column(

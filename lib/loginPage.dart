@@ -254,10 +254,13 @@ class _loginPageState extends State<loginPage> {
   // Check User Credentials
   main() async {
     var headers = {'Content-Type': 'application/json'};
-    var request = http.Request(
-        'POST', Uri.parse('https://poojan16.pythonanywhere.com/api/show1/'));
-    request.body =
-        json.encode({"username": "$_enrollment", "password": "$_password"});
+    var request = http.Request('POST',
+        Uri.parse('https://poojan16.pythonanywhere.com/api/userVerify/'));
+    request.body = json.encode({
+      "username": "$_enrollment",
+      "password": "$_password",
+      "role": "$role"
+    });
     request.headers.addAll(headers);
     http.StreamedResponse response = await request.send();
 
