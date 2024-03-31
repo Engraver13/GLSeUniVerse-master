@@ -1,4 +1,5 @@
 import 'package:GLSeUniVerse/colors.dart';
+import 'package:GLSeUniVerse/forgotPassword.dart';
 import 'package:GLSeUniVerse/home.dart';
 import 'package:GLSeUniVerse/loginPage.dart';
 import 'package:flutter/material.dart';
@@ -492,12 +493,21 @@ class _loginPageState extends State<loginPage> {
                   //       fontSize: 15,
                   //       fontWeight: FontWeight.w300),
                   // ),
-                  Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w300),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return forgotPassword();
+                        },
+                      ));
+                    },
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300),
+                    ),
                   ),
                 ],
               ),

@@ -13,6 +13,7 @@ class _visitorEntryState extends State<visitorEntry> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: primary,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(14.0),
